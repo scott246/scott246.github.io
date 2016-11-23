@@ -12,13 +12,6 @@ nav ul li, footer ul li {
     display: inline;
     margin-right: 20px;
 }
-a {
-    text-decoration: none;
-    color: #999;
-}
-a:hover {
-    text-decoration: underline;
-}
 h1 {
     font-size: 3em;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
@@ -40,4 +33,60 @@ ul.posts {
 
 ul.posts li {
     list-style: none;
+}
+
+a:link    {color:#000000; background-color:transparent; text-decoration:none}
+a:visited {color:#000000; background-color:transparent; text-decoration:none}
+a:hover   {color:#ff0000; background-color:transparent; text-decoration:underline}
+a:active  {color:#ff0000; background-color:transparent; text-decoration:underline}
+#title {
+	text-align:center;
+	font-size:60px;
+	color:#F90;
+	font-family:"Verdana";
+	font-variant:small-caps;
+	text-shadow: 2px 2px #ccc;
+}
+#nav {
+	text-align:center;
+    line-height:30px;
+	word-spacing:30px;
+    padding:5px;	
+	color:#F90;
+	background-color:#F90
+}
+#pHead {
+	text-align:center;
+	font-size:24px;
+	color:#CCC;
+	font-family:"Verdana";
+	padding-bottom: 10px;
+}
+#pBodyHead {
+	font-size:24px;
+	color:#F90;
+	font-family:"Verdana";
+	font-style:oblique;
+	padding-top:10px;
+}
+#footer {
+	font-size:9px;
+	color:#CCC;
+	font-family:"Verdana";
+	font-style:oblique;
+	clear:both;
+}
+#version {
+	font-size:12px;
+	color:#000;
+	font-family:"Verdana";
+	font-style:oblique;
+	text-align:right;
+}
+body {
+	background-color:#333333;
+	background-image:url(bar.jpg);
+	background-repeat:repeat-x;
+	font-family:"Verdana";
+	color:#CCCCCC;
 }
