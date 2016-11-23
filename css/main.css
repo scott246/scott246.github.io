@@ -6,6 +6,10 @@ footer {
     border-top: 1px solid #d5d5d5;
     font-size: .8em;
 }
+nav ul li, footer ul li {
+    display: inline;
+    margin-right: 20px;
+}
 a:link    {color:#000000; background-color:transparent; text-decoration:none}
 a:visited {color:#000000; background-color:transparent; text-decoration:none}
 a:hover   {color:#ff0000; background-color:transparent; text-decoration:underline}
