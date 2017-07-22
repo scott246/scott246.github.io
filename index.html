@@ -1,36 +1,437 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Nathan Scott</title>
-		<!-- link to main stylesheet -->
-		<link rel="stylesheet" type="text/css" href="/css/main.css">
+		<title>Personal Website - Nathan Scott</title>
+		<style>
+			body {
+			    margin: 60px auto;
+			    width: 70%;
+			}
+			footer {
+			    border-top: 1px solid #d5d5d5;
+			    font-size: .8em;
+			}
+			footer ul {
+			    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+			    padding: 0px;
+			    list-style: none;
+			    font-weight: bold;
+			    text-align: center;
+			}
+			footer ul li {
+				text-align: center;
+			    display: inline;
+			    margin-right: 20px;
+			}
+			a:link    {color:#f90; background-color:transparent; text-decoration:none}
+			a:visited {color:#666; background-color:transparent; text-decoration:none}
+			a:hover   {color:#f90; background-color:transparent; text-decoration:underline}
+			a:active  {color:#f90; background-color:transparent; text-decoration:underline}
+			#title {
+				text-align:center;
+				font-size:60px;
+				color:#f90;
+				font-family:"Verdana";
+				font-variant:small-caps;
+				text-shadow: 2px 2px #ccc;
+			}
+			#pHead {
+				text-align:center;
+				font-size:24px;
+				color:#ccc;
+				font-family:"Verdana";
+				padding-bottom: 10px;
+			}
+			#footer {
+				font-size:9px;
+				color:#ccc;
+				font-family:"Verdana";
+				font-style:oblique;
+			}
+			#table {
+				padding:30px 0px;
+			}
+			body {
+				background-color:#333;
+				font-family:"Verdana";
+				color:#ccc;
+				overflow: scroll;
+			}
+			* {box-sizing: border-box}
+
+			div.tab {
+			    float: left;
+			    border:1px solid #f90;
+			    background-color: #333;
+			    width: 10%;
+			    height: 700px;
+			    overflow:scroll;
+			}
+
+			div.tab button {
+				font-family:"Verdana";
+			    display: block;
+			    background-color: #333;
+			    color: #f90;
+			    padding: 22px 16px;
+			    width: 100%;
+			    border: none;
+			    outline: none;
+			    text-align: left;
+			    cursor: pointer;
+			    transition: 0.3s;
+			    font-size: 17px;
+
+			}
+
+			div.tab button:hover {
+			    background-color: #ccc;
+			    color:#333;
+			}
+
+			div.tab button.active {
+			    background-color: #f90;
+			    color:#333;
+			}
+
+			.tabcontent {
+			    float: left;
+			    padding: 0px 12px;
+			    border: 1px solid #f90;
+			    width: 90%;
+			    border-left: none;
+			    height: 700px;
+			    overflow: scroll;
+			}
+			button.accordion {
+				font-family:"Verdana";
+			    color: #333;
+			    cursor: pointer;
+			    padding: 18px;
+			    width: 100%;
+			    text-align: left;
+			    border: none;
+			    outline: none;
+			    transition: 0.4s;
+			}
+
+			button.accordion.active, button.accordion:hover {
+			    background-color: #ccc;
+			}
+			div.panel {
+			    padding: 0 18px;
+			    max-height: 0;
+			    overflow: hidden;
+			    transition: max-height 0.2s ease-out;
+			}
+		</style>
 	</head>
 	<div id="title">
-		<div id="version"> <b> v1.0 </b> </div>
 		<b> Nathan Scott </b> 
 	</div>
-
 	<div id="pHead"> Personal Website </div>
-
-	<div id="nav"> 
-		<a href="/">Welcome</a>
-		<a href="/projects">Projects</a>
-		<a href="/resume">Resume</a>
-        <a href="/about">About</a>
-        <a href="/contact">Contact</a>
-	</div>
-
 	<body>
-		<div id="pBodyHead"> Welcome! </div>
-		<p> Welcome to my personal website! 
-			Here you will find all relevant information about me pertaining to my pursuit of a computer science-related occupation. 
-			Click any of the links above to get started!</p>
+
+		<p align="center">Welcome to my personal website! Here you will find relevant information about me as I pursue my goal of becoming the best coder I can be!</p>
+
+		<div class="tab">
+		  <button class="tablinks" onclick="openSection(event, 'About')" id="defaultOpen">About</button>
+		  <button class="tablinks" onclick="openSection(event, 'Projects')">Projects</button>
+		  <button class="tablinks" onclick="openSection(event, 'Contact')">Contact</button>
+		  <button class="tablinks" onclick="openSection(event, 'Resume')">Resume</button>
+		</div>
+
+		<div id="About" class="tabcontent">
+		  <h3>About</h3>
+		  <p align="center">Hello! I'm Nathan Scott, a graduate of Purdue University with a BS in Computer Science with a concentration in Software Engineering. I graduated in May of 2017 and as of now, work as a Technology Associate for Liberty Mutual. I live in Portsmouth, NH with my adorable cat Clover. I gained many programming skills from my coursework at Purdue, as well as my job at Liberty and my side projects, such as Design Thinking training, Java programming, iOS and Android programming, and experience with many different programming languages and systems. Thank you for visiting my website!</p>
+		</div>
+
+		<div id="Projects" class="tabcontent">
+			<h3>Projects</h3>
+			<p>Click on each project to learn more!</p>
+				<div id="projects">
+					<button class="accordion">Zen</button>
+					<div class="panel">
+					  	<table border="1px">
+						  	<tr>
+						  		<td><b>Date of Completion</td>
+						  		<td><b>Description</td>
+						  		<td><b>Type of Project</td>
+						  		<td><b>Technologies Used</td>
+						  		<td><b>Responsibilities</td>
+						  		<td><b>Link to Project GitHub</td>
+						  	</tr>
+						  	<tr>
+						  		<td>July 2017</td>
+						  		<td>iOS app that helps you keep track of your finances. Supports budgeting, analysis, record keeping, and settings.</td>
+						  		<td>Independent</td>
+						  		<td>Swift, Xcode, Firebase</td>
+						  		<td>Entire project</td>
+						  		<td><a href="https://github.com/scott246/zen_iOS">Link</a></td>
+						  	</tr>
+					  	</table>
+					</div>
+
+					<button class="accordion">Solvr</button>
+					<div class="panel">
+					  	<table border="1px">
+						  	<tr>
+						  		<td><b>Date of Completion</td>
+						  		<td><b>Description</td>
+						  		<td><b>Type of Project</td>
+						  		<td><b>Technologies Used</td>
+						  		<td><b>Responsibilities</td>
+						  		<td><b>Link to Project GitHub</td>
+						  	</tr>
+						  	<tr>
+						  		<td>February 2017</td>
+						  		<td>iOS app that parses and calculates a string as you type it.</td>
+						  		<td>Independent</td>
+						  		<td>Swift, Xcode</td>
+						  		<td>Entire project</td>
+						  		<td><a href="https://github.com/scott246/solvr">Link</a></td>
+						  	</tr>
+					  	</table>
+					</div>
+					<button class="accordion">Underworld</button>
+					<div class="panel">
+					  	<table border="1px">
+						  	<tr>
+						  		<td><b>Date of Completion</td>
+						  		<td><b>Description</td>
+						  		<td><b>Type of Project</td>
+						  		<td><b>Technologies Used</td>
+						  		<td><b>Responsibilities</td>
+						  		<td><b>Link to Project GitHub</td>
+						  	</tr>
+						  	<tr>
+						  		<td>January 2017</td>
+						  		<td>Java game that initializes a launcher, connects to a database, and displays a game. Game is a randomly generated maze with powerups and enemies and a store.</td>
+						  		<td>Independent</td>
+						  		<td>Java, Swing, Netbeans</td>
+						  		<td>Entire project</td>
+						  		<td><a href="https://github.com/scott246/java-game">Link</a></td>
+						  	</tr>
+					  	</table>
+					</div>
+					<button class="accordion">Stork</button>
+					<div class="panel">
+					  	<table border="1px">
+						  	<tr>
+						  		<td><b>Date of Completion</td>
+						  		<td><b>Description</td>
+						  		<td><b>Type of Project</td>
+						  		<td><b>Technologies Used</td>
+						  		<td><b>Responsibilities</td>
+						  		<td><b>Link to Project GitHub</td>
+						  	</tr>
+						  	<tr>
+						  		<td>December 2016</td>
+						  		<td>Angular2 web app which is a dashboard with customizable stock-related widgets.</td>
+						  		<td>Senior Design Project (CS490) - had an Agile team of 5</td>
+						  		<td>Visual Studio/Code, Angular2/Typescript</td>
+						  		<td>Many of the widgets</td>
+						  		<td><a href="https://github.com/cbulava/Stork">Link</a></td>
+						  	</tr>
+					  	</table>
+					</div>
+					<button class="accordion">CS Capstone Marketplace</button>
+					<div class="panel">
+					  	<table border="1px">
+						  	<tr>
+						  		<td><b>Date of Completion</td>
+						  		<td><b>Description</td>
+						  		<td><b>Type of Project</td>
+						  		<td><b>Technologies Used</td>
+						  		<td><b>Responsibilities</td>
+						  		<td><b>Link to Project GitHub</td>
+						  	</tr>
+						  	<tr>
+						  		<td>December 2016</td>
+						  		<td>Web application which is a system designed to allow users of varying types to log on/register and have variable access to match users to groups and groups to projects.</td>
+						  		<td>Programming in Python Project (CS390PYT) - had a team of 3</td>
+						  		<td>Python, Django</td>
+						  		<td>Leadership, most of the project</td>
+						  		<td><a href="https://github.com/scott246/CSCapstone">Link</a></td>
+						  	</tr>
+					  	</table>
+					</div>
+					<button class="accordion">Whispers</button>
+					<div class="panel">
+					  	<table border="1px">
+						  	<tr>
+						  		<td><b>Date of Completion</td>
+						  		<td><b>Description</td>
+						  		<td><b>Type of Project</td>
+						  		<td><b>Technologies Used</td>
+						  		<td><b>Responsibilities</td>
+						  		<td><b>Link to Project GitHub</td>
+						  	</tr>
+						  	<tr>
+						  		<td>November 2016</td>
+						  		<td>User-to-user chat module designed to have two modes: normal and whisper, where all but the last message for each user is deleted.</td>
+						  		<td>Software Testing Project (CS408) - had a team of 6</td>
+						  		<td>JavaScript, HTML, Firebase</td>
+						  		<td>Debugging, implementing functionality, aesthetic changes</td>
+						  		<td><a href="https://github.com/egillott/cs408-fall16-team19">Link</a></td>
+						  	</tr>
+					  	</table>
+					</div>
+					<button class="accordion">CSearch</button>
+					<div class="panel">
+					  	<table border="1px">
+						  	<tr>
+						  		<td><b>Date of Completion</td>
+						  		<td><b>Description</td>
+						  		<td><b>Type of Project</td>
+						  		<td><b>Technologies Used</td>
+						  		<td><b>Responsibilities</td>
+						  		<td><b>Link to Project GitHub</td>
+						  	</tr>
+						  	<tr>
+						  		<td>November 2016</td>
+						  		<td>Search engine which uses a crawler to crawl the purdue.edu domain, and renders results (project is private due to cheating potential for future classes).</td>
+						  		<td>Advanced Java Programming Project (CS390JAV) - individual</td>
+						  		<td>Java, Apache</td>
+						  		<td>Entire project</td>
+						  		<td><a href="https://github.com/scott246/WebCrawler">Link</a></td>
+						  	</tr>
+					  	</table>
+					</div>
+					<button class="accordion">WaveEdit</button>
+					<div class="panel">
+					  	<table border="1px">
+						  	<tr>
+						  		<td><b>Date of Completion</td>
+						  		<td><b>Description</td>
+						  		<td><b>Type of Project</td>
+						  		<td><b>Technologies Used</td>
+						  		<td><b>Responsibilities</td>
+						  		<td><b>Link to Project GitHub</td>
+						  	</tr>
+						  	<tr>
+						  		<td>October 2016</td>
+						  		<td>An application that opens a .wav file and can speed up, slow down, echo, and reverse the wave. Also includes undo/redo functionality. (project is private due to cheating potential for future classes).</td>
+						  		<td>Programming in C++ Project (CS390CPP) - individual</td>
+						  		<td>C++, Visual Studio</td>
+						  		<td>Entire project</td>
+						  		<td><a href="https://github.com/scott246/WaveEdit">Link</a></td>
+						  	</tr>
+					  	</table>
+					</div>
+					<button class="accordion">StudyBuddy</button>
+					<div class="panel">
+					  	<table border="1px">
+						  	<tr>
+						  		<td><b>Date of Completion</td>
+						  		<td><b>Description</td>
+						  		<td><b>Type of Project</td>
+						  		<td><b>Technologies Used</td>
+						  		<td><b>Responsibilities</td>
+						  		<td><b>Link to Project GitHub</td>
+						  	</tr>
+						  	<tr>
+						  		<td>December 2015</td>
+						  		<td>An Android app which allows students within a class to communicate with each other through the app. <a href="https://play.google.com/store/apps/details?id=com.team18.studybuddy.studybuddy">Also on Google Play store!</a></td>
+						  		<td>Software Engineering I Project (CS307) - Agile team of 5</td>
+						  		<td>Java, XML, Android Studio</td>
+						  		<td>Feedback page, about page, front-end work, and quality assurance</td>
+						  		<td><a href="https://github.com/MonoAlpaca/StudyBuddy">Link</a></td>
+						  	</tr>
+					  	</table>
+					</div>
+					<button class="accordion">Void</button>
+					<div class="panel">
+					  	<table border="1px">
+						  	<tr>
+						  		<td><b>Date of Completion</td>
+						  		<td><b>Description</td>
+						  		<td><b>Type of Project</td>
+						  		<td><b>Technologies Used</td>
+						  		<td><b>Responsibilities</td>
+						  		<td><b>Link to Project GitHub</td>
+						  	</tr>
+						  	<tr>
+						  		<td>December 2015</td>
+						  		<td>A modernized Asteroids clone. <a href="https://scott246.github.io/cs252-asteroids/projects/cs252/void/public/game.html">Demo!</a> (use WASD to move, arrow keys to shoot)</td>
+						  		<td>Systems Programming Project (CS252) - team of 3</td>
+						  		<td>JavaScript, IBM Bluemix, Sublime Text</td>
+						  		<td>Game and artwork</td>
+						  		<td><a href="https://github.com/scott246/cs252-asteroids">Link</a></td>
+						  	</tr>
+					  	</table>
+					</div>
+					</ul>
+				</div>
+		</div>
+
+		<div id="Contact" class="tabcontent">
+		  	<h3>Contact</h3>
+		  	<div id="table">
+				<table align="center" padding="10px 10px">
+				  	<tr>
+		                <td></td>
+		                <td align="center"><b>Email</td>
+		                <td align="center"><b>Phone</td>
+		            </tr>
+		            <tr>
+		                <td><b>Home</td>
+		                <td align="center">ndscott32@gmail.com</td>
+		                <td align="center">(574) 383-7907
+		            </tr>
+		            <tr>
+		                <td><b>Work</td>
+		                <td align="center">nathan.scott@libertymutual.com</td>
+		                <td align="center">(603) 245-6676</td>
+		            </tr>
+		        </table>
+	    	</div>
+		</div>
+
+		<div id="Resume" class="tabcontent">
+		  <h3>Resume</h3>
+		  <embed src="Resume_Nathan_Scott-10.pdf" width="100%" height="1200px" align="center" />
+		</div>
+
+		<script>
+			function openSection(evt, cityName) {
+			    var i, tabcontent, tablinks;
+			    tabcontent = document.getElementsByClassName("tabcontent");
+			    for (i = 0; i < tabcontent.length; i++) {
+			        tabcontent[i].style.display = "none";
+			    }
+			    tablinks = document.getElementsByClassName("tablinks");
+			    for (i = 0; i < tablinks.length; i++) {
+			        tablinks[i].className = tablinks[i].className.replace(" active", "");
+			    }
+			    document.getElementById(cityName).style.display = "block";
+			    evt.currentTarget.className += " active";
+			}
+
+			document.getElementById("defaultOpen").click();
+
+			var acc = document.getElementsByClassName("accordion");
+			var i;
+
+			for (i = 0; i < acc.length; i++) {
+			  acc[i].onclick = function() {
+			    this.classList.toggle("active");
+			    var panel = this.nextElementSibling;
+			    if (panel.style.maxHeight){
+			      panel.style.maxHeight = null;
+			    } else {
+			      panel.style.maxHeight = panel.scrollHeight + "px";
+			    } 
+			  }
+			}
+		</script>
 	</body>
+	<hr />
 	<footer>
 		<ul>
-			<li><a href="mailto:scott246@purdue.edu">Email</a></li>
+			<li><a href="mailto:ndscott32@gmail.com">Email</a></li>
 			<li><a href="https://github.com/scott246">Github</a></li>
-			<li><a href="https://www.linkedin.com/in/nathan-scott-39b4b87b">Linkedin</a></li>
+			<li><a href="https://www.linkedin.com/in/nathan-scott-39b4b87b">LinkedIn</a></li>
 		</ul>
 	</footer>
-</html>
+</html> 
