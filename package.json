@@ -15,5 +15,5 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "http://scott246.github.io/scott246.github.io"
+  "homepage": "http://scott246.github.io/"
 }
