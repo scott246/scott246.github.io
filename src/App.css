@@ -1,0 +1,114 @@
+:root {
+  --main-color: rgb(0,0,0);
+  --sub-color: rgb(112,138,144);
+  --accent-color: rgb(0,0,255);
+
+  --header-font: 'Press Start 2P', 'Courier New', 'Courier', monospace;
+  --text-font: 'Open Sans', sans-serif;
+}
+
+body {
+  /*background-image: url("pat6.png");*/
+  background-color: var(--main-color);
+}
+
+table, td, th {
+  padding: 5px;
+}
+
+th {
+  color: var(--main-color);
+  background-color: var(--accent-color)
+}
+
+tr {
+  background-color: var(--sub-color);
+  color: var(--main-color)
+}
+
+a:link    {color:var(--accent-color); background-color: transparent; text-decoration: underline}
+a:visited {color:var(--accent-color); background-color: transparent; text-decoration: underline}
+a:hover   {color:var(--accent-color); background-color: transparent; text-decoration: underline}
+a:active  {color:var(--accent-color); background-color: transparent; text-decoration: underline}
+
+.App-header {
+  background-color: var(--main-color);
+  height: 150px;
+  padding: 20px;
+  color: var(--accent-color);
+}
+
+.App-nav {
+  background-color: var(--sub-color);
+  color: var(--accent-color);
+  text-align: center;
+  z-index: 100;
+  left: 0px;
+  top: 0px;
+  position: fixed;
+}
+
+.App-nav a {
+  display: block;
+  padding: 20px;
+  font-family: var(--header-font);
+  font-size: 48px;
+}
+
+.App-nav a:hover {
+  background-color: var(--accent-color);
+}
+
+.Page {
+  background-color: var(--sub-color);
+  width: 50%;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: var(--text-font);
+  text-align: center;
+}
+
+.Page-Left {
+  background-color: var(--sub-color);
+  width: 50%;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: var(--text-font);
+  text-align: left;
+}
+
+canvas {
+  display: absolute;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Spacer {
+  padding: 10px;
+}
+
+.Logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.App-title {
+  font-size: 1em;
+  font-family: var(--header-font);
+  text-align: center;
+}
+
+.Section-title {
+  background-color: var(--sub-color);
+  width: 50%;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: var(--header-font);
+}
